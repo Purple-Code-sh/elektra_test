@@ -25,7 +25,7 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 
 2. Navega al directorio del proyecto:
    ```bash
-   cd tu-repositorio
+   cd elektra_test
    ```
 
 3. Instala las dependencias:
