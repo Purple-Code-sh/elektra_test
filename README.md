@@ -20,7 +20,7 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 ## **Instrucciones de instalación**
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/Purple-Code-sh/elektra_test.git
    ```
 
 2. Navega al directorio del proyecto:
