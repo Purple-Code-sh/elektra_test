@@ -1,0 +1,66 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(2rem * var(--scale-factor));
+    text-align: center;
+    background: rgba(var(--bg-color-300), var(--bg-opacity));
+    border-radius: calc(8px * var(--scale-factor));
+    box-shadow: 0 calc(4px * var(--scale-factor)) calc(8px * var(--scale-factor)) rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: calc(2rem * var(--scale-factor));
+    color: rgba(var(--primary));
+    margin-bottom: calc(1.5rem * var(--scale-factor));
+}
+
+.description {
+    font-size: calc(1rem * var(--scale-factor));
+    margin-bottom: calc(2rem * var(--scale-factor));
+    color: rgba(var(--text-color));
+}
+
+.fetchButton {
+    padding: calc(0.75rem * var(--scale-factor)) calc(1.5rem * var(--scale-factor));
+    background: rgba(var(--primary));
+    color: rgba(var(--text-color));
+    border: none;
+    border-radius: calc(4px * var(--scale-factor));
+    font-size: calc(1rem * var(--scale-factor));
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--normal-transition);
+}
+
+.fetchButton:hover {
+    background: rgba(var(--primary-200));
+}
+
+.fetchButton:active {
+    background: rgba(var(--accent));
+}
+
+.userTable {
+    width: 100%;
+    margin-top: calc(2rem * var(--scale-factor));
+    border-collapse: collapse;
+    background: rgba(var(--bg-color-200), var(--bg-opacity));
+    color: rgba(var(--text-color));
+}
+
+.userTable th,
+.userTable td {
+    padding: calc(0.75rem * var(--scale-factor));
+    border: 1px solid rgba(var(--text-color-300));
+    text-align: left;
+}
+
+.userTable th {
+    background: rgba(var(--primary-300), 0.8);
+    color: rgba(var(--text-color));
+    font-weight: bold;
+}
+
+.userTable tr:nth-child(even) {
+    background: rgba(var(--bg-color-300), 0.5);
+}

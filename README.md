@@ -1,8 +1,8 @@
-# React + Vite
+# EXAMEN DE FRONT – GRUPO SALINAS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Javier Shmin Infante Barrios
 
-Currently, two official plugins are available:
+Pasos para ejecutar esta aplicación:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Copiar el siguiente link: https://github.com/Purple-Code-sh/elektra_test.git
+- En una terminal, situa

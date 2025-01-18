@@ -1,0 +1,136 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(var(--bg-color-300));
+    color: rgba(var(--text-color));
+    font-size: var(--base-font-size);
+    padding: calc(2rem * var(--scale-factor));
+    padding-top: 0px;
+}
+
+.carousel {
+    text-align: center;
+    margin-bottom: calc(3rem * var(--scale-factor));
+}
+
+.carouselTitle {
+    font-size: calc(2rem * var(--scale-factor));
+    color: rgba(var(--primary));
+    margin-bottom: calc(1.5rem * var(--scale-factor));
+}
+
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton {
+    background: none;
+    border: 2px solid rgba(var(--primary-200));
+    border-radius: 50%;
+    font-size: calc(2rem * var(--scale-factor));
+    font-weight: bolder;
+    padding: calc(0.5rem * var(--scale-factor)) calc(1rem * var(--scale-factor));
+    cursor: pointer;
+    color: rgba(var(--primary-200));
+    transition: background-color var(--normal-transition), color var(--normal-transition);
+}
+
+.navButton:hover {
+    background: rgba(var(--primary-200));
+    color: rgba(var(--text-color));
+}
+
+.navButton:active {
+    background: rgba(var(--accent));
+    border: 2px solid rgba(var(--accent));
+}
+
+.carouselContent {
+    text-align: center;
+    margin: 0 calc(2rem * var(--scale-factor));
+    width: 15vw;
+    /* border: 1px solid red; */
+}
+
+.icon {
+    font-size: calc(4rem * var(--scale-factor));
+    display: block;
+    margin-bottom: calc(1rem * var(--scale-factor));
+}
+
+.carouselItemTitle {
+    font-size: calc(1.5rem * var(--scale-factor));
+    font-weight: bold;
+}
+
+.contactForm {
+    background: rgba(var(--bg-color-200), var(--bg-opacity));
+    padding: calc(2rem * var(--scale-factor));
+    border-radius: calc(8px * var(--scale-factor));
+    box-shadow: 0 calc(4px * var(--scale-factor)) calc(6px * var(--scale-factor)) rgba(0, 0, 0, 0.1);
+    backdrop-filter: var(--blur-effect);
+    width: 100%;
+    max-width: 600px;
+}
+
+.formTitle {
+    font-size: calc(2rem * var(--scale-factor));
+    margin-bottom: calc(1.5rem * var(--scale-factor));
+    color: rgba(var(--primary));
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: calc(1rem * var(--scale-factor));
+}
+
+label {
+    display: block;
+    font-size: calc(1rem * var(--scale-factor));
+    font-weight: bold;
+    margin-bottom: calc(0.5rem * var(--scale-factor));
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: calc(0.75rem * var(--scale-factor));
+    border: 1px solid rgba(var(--bg-color-200));
+    border-radius: calc(4px * var(--scale-factor));
+    font-size: calc(1rem * var(--scale-factor));
+    background: rgba(var(--bg-color-300));
+    color: rgba(var(--text-color));
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    background: rgba(var(--primary));
+    color: rgba(var(--text-color));
+    padding: calc(0.75rem * var(--scale-factor));
+    border: none;
+    border-radius: calc(4px * var(--scale-factor));
+    font-size: calc(1rem * var(--scale-factor));
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: calc(1rem * var(--scale-factor));
+    transition: background-color var(--normal-transition);
+}
+
+.submitButton:hover {
+    background: rgba(var(--primary-200));
+}
+
+.submitButton:active {
+    background: rgba(var(--accent));
+}

@@ -1,11 +1,60 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background: rgb(var(--accent));
+  color: rgb(var(--light));
+}
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --base-font-size: 13px;
+  --scale-factor: 1;
+
+  /* Screen size breakpoints */
+  --xs-screen: 480px;
+  --s-screen: 768px;
+  --m-screen: 992px;
+  --lg-screen: 1200px;
+  --xl-screen: 1800px;
+
+
+  /* Transition times */
+  --slow-transition: 0.6s;
+  --normal-transition: 0.3s;
+  --fast-transition: 0.15s;
+
+  --text-color: 255, 255, 255;
+  --text-color-200: 230, 230, 230;
+  --text-color-300: 203, 203, 203;
+
+  --primary: 33, 177, 255;
+  --primary-200: 63, 160, 213;
+  --primary-300: 79, 138, 170;
+
+  --accent: 255, 162, 38;
+
+  /* Background */
+  --bg-color: 80, 111, 128;
+  --bg-color-200: 68, 79, 85;
+  --bg-color-300: 43, 48, 51;
+
+  --bg-opacity: 0.8;
+  --blur-effect: blur(5px);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +62,94 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body {
+  background-color: rgb(var(--bg-color-300));
+  color: rgb(var(--text-color));
+  transition: background-color var(--slow-transition), color var(--slow-transition);
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+html {
+  font-size: var(--base-font-size);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.4vw);
+  margin-bottom: calc(0.15rem * var(--scale-factor));
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.35vw);
+  margin-bottom: calc(0.1rem * var(--scale-factor));
 }
 
-@media (prefers-color-scheme: light) {
+h3 {
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.3vw);
+  margin-bottom: calc(0.1rem * var(--scale-factor));
+}
+
+h4 {
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.25vw);
+  margin-bottom: calc(0.05rem * var(--scale-factor));
+}
+
+h5 {
+  color: rgb(var(--text-color));
+  font-family: Verdana, Geneva, Tahoma, sans-serif, system-ui;
+  font-size: calc(1rem * var(--scale-factor) + 0.2vw);
+  margin-bottom: calc(0.05rem * var(--scale-factor));
+}
+
+/* Media queries se mantienen igual */
+@media (max-width: var(--xs-screen)) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --scale-factor: 0.8;
   }
-  a:hover {
-    color: #747bff;
+
+  .container {
+    width: 100vw;
+    padding: 0 calc(0.5rem * var(--scale-factor));
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: var(--s-screen)) {
+  :root {
+    --scale-factor: 0.85;
+  }
+}
+
+@media (max-width: var(--m-screen)) {
+  :root {
+    --scale-factor: 0.9;
+  }
+
+  .container {
+    width: 95vw;
+  }
+}
+
+@media (max-width: var(--lg-screen)) {
+  :root {
+    --scale-factor: 0.95;
+  }
+}
+
+
+@media (min-width: var(--xl-screen)) {
+  :root {
+    --scale-factor: 1.1;
   }
 }
